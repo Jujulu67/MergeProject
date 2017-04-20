@@ -7,120 +7,90 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/bootstrap-responsive.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}"/>
+
     {% block stylesheets %}{% endblock %}
 </head>
 <body style="background: url({{ asset('img/fond.png') }})">
 
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="row" id="nav">
-        <div class="col-lg-2">
-            <a href="{{ path('accueil') }}">
-                <img id="logo" src="{{ asset('img/bde1.png') }}" alt="Logo BDE exia.CESI"/> </a>
-        </div>
-
-
-        <div class="col-lg-10">
-
-            <div class="col-lg-4">
-            </div>
-
-
-            <input class="col-lg-3 search" type="search" placeholder="Entrez un mot-clef..." name="search"/>
-
-            <button class="col-lg-1 s2">Rechercher</button>
-
-            <div class="col-lg-1">
-            </div>
-
-            <a href="{{ path('fos_user_security_login') }}">
-                <button class="col-lg-1 log">
-                    <p>Connexion</p>
-                </button>
-            </a>
-
-            <a href="{{ path('fos_user_registration_register') }}">
-                <button class="col-lg-1 bl log">
-                    <p>Inscription</p>
-                </button>
-            </a>
-
-            <div id="vide" class="col-lg-12">
-            </div>
-
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="row" id="nav">
             <div class="col-lg-2">
+                <a href="{{ path('accueil') }}">
+                    <img id="logo" src="{{ asset('img/bde1.png') }}" alt="Logo BDE exia.CESI"/> </a>
             </div>
 
-            <a href="{{ path('accueil') }}">
-                <button class="col-lg-2 onglet">
-                    <p>Accueil</p>
-                </button>
-            </a>
 
-            <a href="{{ path('list_Valid_activity') }}">
-                <button class="col-lg-2 onglet bl">
-                    <p>Activité</p>
-                </button>
-            </a>
+            <div class="col-lg-10">
 
-            <a href="{{ path('produits') }}">
-                <button class="col-lg-2 onglet bl">
-                    <p>Boutique</p>
-                </button>
-            </a>
+                <div class="col-lg-7">
+                </div>
 
-            <a href="galerie.html">
-                <button class="col-lg-2 onglet bl">
-                    <p>Galerie photos</p>
-                </button>
-            </a>
+                <div class="col-lg-2">
+                </div>
 
-            <a href="contact.html">
-                <button class="col-lg-2 onglet bl">
-                    <p>Contact</p>
-                </button>
-            </a>
+                <div class="col-lg-1">
+                </div>
 
+                <a href="{{ path('fos_user_security_login') }}">
+                    <button class="col-lg-1 log">
+                        <p>Connexion</p>
+                    </button>
+                </a>
+
+                <a href="{{ path('fos_user_registration_register') }}">
+                    <button class="col-lg-1 bl log">
+                        <p>Inscription</p>
+                    </button>
+                </a>
+
+                <div id="vide"class="col-lg-12">
+                </div>
+
+                <div class="col-lg-2">
+                </div>
+
+                <a href="{{ path('accueil') }}">
+                    <button class="col-lg-2 onglet">
+                        <p>Accueil</p>
+                    </button>
+                </a>
+
+                <a href="{{ path('list_Valid_activity') }}">
+                    <button class="col-lg-2 onglet bl">
+                        <p>Activité</p>
+                    </button>
+                </a>
+
+                <a href="{{ path('produits') }}">
+                    <button class="col-lg-2 onglet bl">
+                        <p>Boutique</p>
+                    </button>
+                </a>
+
+                <a href="{{ path('list_photos') }}">
+                    <button class="col-lg-2 onglet bl">
+                        <p>Galerie photos</p>
+                    </button>
+                </a>
+
+                <a href="#">
+                    <button class="col-lg-2 onglet bl">
+                        <p>Contact</p>
+                    </button>
+                </a>
+
+            </div>
         </div>
-    </div>
 
-</nav>
+    </nav>
+</header>
+
 
 
 {% block body %}{% endblock %}
-<hr/>
-<footer id="footer" class="vspace20">
-    <div class="container">
-        <div class="row">
-            <div class="span4 offset1">
-                <h4>Informations</h4>
-                <ul class="nav nav-stacked">
-                    <li><a href="{{ path('page', { 'id' : 1 }) }}">CGV</a>
-                    <li><a href="{{ path('page', { 'id' : 2 }) }}">Mentions légales</a>
-                </ul>
-            </div>
 
-            <div class="span4">
-                <h4>Notre entrepôt</h4>
-                <p><i class="icon-map-marker"></i>&nbsp;Paris 75 000 - 3 rue des jardins</p>
-            </div>
-
-            <div class="span2">
-                <h4>Nous contacter</h4>
-                <p><i class="icon-phone"></i>&nbsp;Tel: 02 35 00 00 00</p>
-                <p><i class="icon-print"></i>&nbsp;Fax: 02 35 00 00 00</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="span4">
-                <p>&copy; Copyright 2017 - GastonLab</p>
-            </div>
-        </div>
-    </div>
-</footer>
 <script src="{{ asset('js/jquery-1.10.0.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.js') }}"></script>
 {% block javascripts %}{% endblock %}
