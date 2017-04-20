@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\File\File;
 /**
  * @ORM\Entity
  * @ORM\Table(name="photos")
- * @Vich\Uploadable
+ *
  */
 class Photos
 {

@@ -68,7 +68,7 @@ class ActivityController extends Controller
      * @Route("/activity/", name="list_Valid_activity")
      */
     public function listValidActivityAction(){
-        $listValidActivity = $this->getDoctrine()->getRepository("ProjetWebBundle:Activity")->findBy(array('state' => 2));
+        $listValidActivity = $this->getDoctrine()->getRepository("ProjetWebBundle:Activity")->findBy(array('state' => 2),['date' => 'desc']);
         
 
         return $this->render('ProjetWebBundle:Activity:listValidActivity.html.twig', array(
