@@ -1,0 +1,154 @@
+#nav
+{
+	background-color: #D90119;
+	font-family: Arial;
+	text-align: left;
+	padding-top: 10px;
+	border-bottom: 2px black solid;
+}
+
+#sec
+{
+	padding-top: 51px;
+	margin-top: 51px;
+}
+
+#logo
+{
+	border-radius: 200px;
+	max-height: 120px;
+}
+
+.onglet
+{
+background-color: #D90119;
+border:none;
+height: 55px;
+text-align: center;
+font-family: Arial;
+font-size: 28px;
+color: black;
+}
+
+.bl
+{
+	border-left: 1px black solid;
+}
+
+.onglet:hover
+{
+color: white;
+}
+
+#vide
+{
+height: 15px;
+}
+
+.log
+{
+	background-color: #D90119;
+	border:none;
+	height: 55px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 20px;
+	color: black;
+	
+}
+
+.log:hover
+{
+	color: white;
+
+}
+
+body
+{
+
+	margin: 0px;
+	padding: 0px;
+	background-size: cover;
+}
+
+.fond
+{
+	background-color: white;
+	opacity: 0.865;
+	border: 2px solid black;
+	border-radius: 6px;
+	line-height: 40px;
+	text-align: left;
+	border:2px black solid;
+}
+
+.search
+{
+	width: 550px;
+	height: 30px;
+	background-color: white;
+	border-radius: 10px;
+
+}
+
+.s2
+{
+	height: 30px;
+	background-color:#D90119;
+	border-radius: 10px;
+	border: 1px black solid;
+	color: black;
+	
+}
+
+.s2:hover
+{
+	background-color: white;
+	color:black;
+	font-weight: bold;
+}
+
+button 
+{
+	text-align: center;
+
+}
+.pic
+{
+	max-height: 150px;
+	max-width: 300px;
+}
+
+.droite
+{
+	text-align: right;
+}
+
+.centre
+{
+	text-align: center;
+}
+
+input
+{
+	width: 300px;
+	border-radius: 10px;
+	border:black 1px solid;
+	height: 35px;
+	background-color: white;
+}
+
+/*
+[class*="col-"] {
+  background-color: lightgreen;
+  border: 2px solid black;
+  border-radius: 6px;
+  line-height: 40px;;
+  border:2px black solid;
+}*/
+
+
+.borderavatar
+{
+	border: black 3px solid;
+}

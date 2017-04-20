@@ -1,0 +1,28 @@
+projet_web:
+    resource: "@ProjetWebBundle/Controller/"
+    type:     annotation
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+utilisateurs:
+    resource: "@UtilisateursBundle/Resources/config/routing.yml"
+
+
+pages:
+    resource: "@PagesBundle/Resources/config/routing.yml"
+
+
+ecommerce:
+    resource: "@EcommerceBundle/Resources/config/routing.yml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+

@@ -1,0 +1,55 @@
+{% extends "::layout/layout.html.twig" %}
+
+{% block body %}
+    <section id="sec">
+        <p>-</p>
+        <div class="row">
+            <div class="col-lg-offset-2 col-lg-8 fond">
+    <center><h3>liste des activités</h3></center>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped" id="orderData">
+                    <thead>
+                    <tr>
+                        <th>Nom de l'activité</th>
+                        <th>Date de l'évenement</th>
+                        <th>Description</th>
+                        <th>Etat de l'activité</th>
+                        <th>Prix</th>
+
+                        <th>Modif/Suppr</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for activity in listActivity %}
+                        <tr>
+                            <td>{{ activity.activityName }}</td>
+                            <td>{{ activity.date|date("m/d/Y")|date('Y-m-d') }}</td>
+                            <td>{{ activity.description }}</td>
+                            <td>
+
+                                {% if activity.state == 1 %}
+                                    <span class="label label-warning">en attente de validation</span>
+
+                                {% elseif activity.state == 2 %}
+                                    <span class="label label-success">validé</span>
+
+                                {% else %}
+                                    <span class="label label-danger">refusé</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ activity.price }}</td>
+                            <td><a class="btn btn-primary" href="{{ path('edit_activity', {'activityId' : activity.id}) }}">modif</a>
+                                <a class="btn btn-primary" href="{{ path('delete_activity', {'activityId' : activity.id}) }}">delete</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+{% endblock %}
