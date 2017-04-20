@@ -46,6 +46,12 @@ class Photos
      */
     private $pictureFile;
 
+    /**
+     * @ORM\OneToMany(targetEntity="ProjetWebBundle\Entity\Comment", mappedBy="photo", cascade={"persist"})
+     */
+
+    private $comments;
+
 
     /**
      * Get id
@@ -122,4 +128,45 @@ class Photos
     }
 
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add comment
+     *
+     * @param \ProjetWebBundle\Entity\Comment $comment
+     *
+     * @return Photos
+     */
+    public function addComment(\ProjetWebBundle\Entity\Comment $comment)
+    {
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \ProjetWebBundle\Entity\Comment $comment
+     */
+    public function removeComment(\ProjetWebBundle\Entity\Comment $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
 }
