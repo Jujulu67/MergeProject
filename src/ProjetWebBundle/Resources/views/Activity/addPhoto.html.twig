@@ -38,6 +38,7 @@
 
             {% endfor %}
 
+{% if is_granted("ROLE_USER") %}
 
                 <div style="text-align: center" class="col-lg-4">
                     <h3>Ajouter une photo</h3>
@@ -61,6 +62,7 @@
                 </div>
             </div>
                 </div>
+{% endif %}
         </div>
 
             </div>

@@ -30,13 +30,15 @@
 
 
                         <h4><a class="btn btn-danger" href="{{ path('add_photo', {'activityId' : activity.id}) }}">Détails
-                                de l'activité</a> <a class="btn btn-danger" href="">Participer à l'activité</a></h4>
+                                de l'activité</a>
+                        {% if is_granted("ROLE_USER") %}<a class="btn btn-danger" href="">Participer à l'activité</a></h4>{% endif %}
 
                         <br>
 
                     {% endfor %}
-
+    {% if is_granted("ROLE_USER") %}
                     <h4><a class="btn btn-danger" href="{{ path('create_activity') }}">Soumettre une activité</a></h4>
+        {% endif %}
 
                 </div>
 
