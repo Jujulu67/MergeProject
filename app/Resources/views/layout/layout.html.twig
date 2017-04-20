@@ -10,15 +10,19 @@
 
     {% block stylesheets %}{% endblock %}
 </head>
-<body style="background: url({{ asset('img/fond.png') }})">
+<body style="background: url({{ asset('img/fond.png') }}) no-repeat center fixed">
 
 
 <header>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="row" id="nav">
-            <div class="col-lg-2">
+            <div class="col-lg-1">
                 <a href="{{ path('accueil') }}">
-                    <img id="logo" src="{{ asset('img/bde1.png') }}" alt="Logo BDE exia.CESI"/> </a>
+                    <img id="logo" src="{{ asset('img/bde1.png') }}" alt="Logo BDE exia.CESI"/>
+                </a>
+            </div>
+
+            <div class="col-lg-1">
             </div>
 
 

@@ -5,16 +5,22 @@
         <p>-</p>
         <div class="row">
             <div class="col-lg-offset-2 col-lg-8 fond">
+                <br>
                 <h1>Bienvenue sur le site OFFICIEL du BDE de l'Exia Cesi Strasbourg</h1>
-                <h1>Dernieres activités publiées</h1>
+                <br>
+                <h3>Paragraphe rapide sur le BDE de l'Exia</h3>
+                <br>
                 {% for activity in listValidActivity %}
-                    <h2><strong> {{ activity.activityName }} : {{ activity.date|date("m/d/Y")|date('Y-m-d') }}</strong>
+                    <h3><strong> {{ activity.activityName }} : {{ activity.date|date("m/d/Y")|date('Y-m-d') }}</strong>
                         <a
                                 class="btn btn-danger"
                                 href="{{ path('add_photo', {'activityId' : activity.getId()}) }}">Détails de
-                            l'activité</a></h2>
-                    <h4><br></h4>
+                            l'activité</a></h3>
+
                     <h4>{{ activity.description }}</h4>
+
+                    <br>
+                    <p style="color: red">Ajout de fonctionnalités sur la page d'accueil. 2 dernières activités, photos ? </p>
 
                 {% endfor %}
                 </br>

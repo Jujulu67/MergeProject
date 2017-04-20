@@ -6,14 +6,15 @@
         <div class="row">
             <div class="col-lg-offset-2 col-lg-8 fond">
 
-                <h1 style="text-align: center">Liste des activitées validées</h1>
+                <br>
+                <h1>Liste des activités</h1>
+                <br>
 
                 <div class="col-lg-12">
 
                     {% for activity in listValidActivity %}
-                        <h2><strong> {{ activity.activityName }}
-                                : {{ activity.date|date("m/d/Y")|date('Y-m-d') }}</strong></h2>
-                        <h4><br></h4>
+                        <h3><strong> {{ activity.activityName }}
+                                : {{ activity.date|date("m/d/Y")|date('Y-m-d') }}</strong></h3>
                         <h4>{{ activity.description }}</h4>
                         {% if activity.price == 0 %}
                             <h4><p>
@@ -22,8 +23,6 @@
                             <h4><p> Le prix est de :
                                     {{ activity.price }} €</p></h4>
                         {% endif %}
-
-
 
 
                         <h4><a class="btn btn-danger" href="{{ path('add_photo', {'activityId' : activity.id}) }}">Détails

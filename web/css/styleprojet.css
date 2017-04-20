@@ -2,15 +2,15 @@
 {
 	background-color: #D90119;
 	font-family: Arial;
+	padding-top: 3px;
 	text-align: left;
-	padding-top: 10px;
 	border-bottom: 2px black solid;
+	text-align: right;
 }
 
 #sec
 {
-	padding-top: 51px;
-	margin-top: 51px;
+	margin-top: 98px;
 }
 
 #logo
