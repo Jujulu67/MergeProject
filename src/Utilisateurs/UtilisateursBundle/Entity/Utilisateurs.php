@@ -20,17 +20,17 @@ class Utilisateurs extends BaseUser
     protected $id;
 
     /**
-     * @var string
+     * @ORM\Column(type="string")
      */
     protected $nom;
 
     /**
-     * @var string
+     * @ORM\Column(type="string")
      */
-    protected $prénom;
+    protected $prenom;
 
     /**
-     * @var integer
+     * @ORM\Column(type="integer")
      */
     protected $phonenumber;
 
@@ -123,5 +123,77 @@ class Utilisateurs extends BaseUser
     public function getAdresses()
     {
         return $this->adresses;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Utilisateurs
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     *
+     * @return Utilisateurs
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set phonenumber
+     *
+     * @param integer $phonenumber
+     *
+     * @return Utilisateurs
+     */
+    public function setPhonenumber($phonenumber)
+    {
+        $this->phonenumber = $phonenumber;
+
+        return $this;
+    }
+
+    /**
+     * Get phonenumber
+     *
+     * @return integer
+     */
+    public function getPhonenumber()
+    {
+        return $this->phonenumber;
     }
 }

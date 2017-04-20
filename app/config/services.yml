@@ -4,10 +4,10 @@ parameters:
     #parameter_name: value
 
 services:
-  projetweb.form.registration:
-              class: ProjetWebBundle\Form\RegistrationType
-              tags:
-                  - { name: form.type, alias: projetweb_user_registration }
+    app.form.registration:
+        class: Utilisateurs\UtilisateursBundle\Form\RegistrationType
+        tags:
+            - { name: form.type, alias: app_user_registration }
 
     #service_name:
     #    class: AppBundle\Directory\ClassName
