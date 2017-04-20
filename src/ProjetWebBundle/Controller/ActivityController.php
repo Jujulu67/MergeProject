@@ -77,7 +77,7 @@ class ActivityController extends Controller
 
     }
     /**
-     * @Route("/activity/edit/{activityId}", name="edit_activity", requirements={"activityId": "\d+"})
+     * @Route("/activity/moderate/{activityId}", name="edit_activity", requirements={"activityId": "\d+"})
      */
     public function editActivityAction($activityId){
         $em = $this->getDoctrine()->getManager();
@@ -103,7 +103,7 @@ class ActivityController extends Controller
     }
 
     /**
-     * @Route("/activity/delete/{activityId}", name="delete_activity", requirements={"activityId": "\d+"})
+     * @Route("/activity/moderate/delete/{activityId}", name="delete_activity", requirements={"activityId": "\d+"})
      */
     public function deleteActivityAction($activityId){
         $em = $this->getDoctrine()->getManager();
