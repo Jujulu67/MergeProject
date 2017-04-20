@@ -23,6 +23,7 @@ class Activity
     /**
     * @ORM\OneToMany(targetEntity="ProjetWebBundle\Entity\Photos", mappedBy="activity", cascade={"persist"})
     */
+    
     private $photos;
 
     /**

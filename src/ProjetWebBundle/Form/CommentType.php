@@ -38,7 +38,7 @@ class CommentType extends AbstractType
 
 
 
-            ->add('comment'
+            ->add('commentaire'
                 , null,["error_bubbling" => true, "label" => "Votre commentaire"]
             );
 

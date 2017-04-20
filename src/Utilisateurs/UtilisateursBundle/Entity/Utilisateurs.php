@@ -56,11 +56,6 @@ class Utilisateurs extends BaseUser
 
     private $adresses;
 
-    /**
-     * @ORM\OneToMany(targetEntity="ProjetWebBundle\Entity\Comment", mappedBy="user", cascade={"persist"})
-     */
-    
-    private $comments;
     
     
 
@@ -205,37 +200,5 @@ class Utilisateurs extends BaseUser
         return $this->phonenumber;
     }
 
-    /**
-     * Add comment
-     *
-     * @param \ProjetWebBundle\Entity\Comment $comment
-     *
-     * @return Utilisateurs
-     */
-    public function addComment(\ProjetWebBundle\Entity\Comment $comment)
-    {
-        $this->comments[] = $comment;
 
-        return $this;
-    }
-
-    /**
-     * Remove comment
-     *
-     * @param \ProjetWebBundle\Entity\Comment $comment
-     */
-    public function removeComment(\ProjetWebBundle\Entity\Comment $comment)
-    {
-        $this->comments->removeElement($comment);
-    }
-
-    /**
-     * Get comments
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getComments()
-    {
-        return $this->comments;
-    }
 }

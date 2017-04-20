@@ -29,9 +29,9 @@
             {% for photo in photos %}
 
                 <div class="col-lg-4">
-                    <div style="text-align: center"><img style="width:300px;height:300px;" src="{{ asset('uploads/' ~ photo.pictureFile) }}" />
-                        <p style="font-style: italic;">{{ photo.descriptionPhoto }}</p>
-                    </div>
+                    <a href="{{ path('add_comment', {'photoId' : photo.id}) }}"><div style="text-align: center"><img style="width:300px; height:300px;" src="{{ asset('uploads/' ~ photo.pictureFile) }}" /> </div></a>
+                        <p style="font-style: italic;">{{ photo.descriptionPhoto }} </p>
+
                 </div>
 
 
@@ -62,8 +62,9 @@
                 </div>
             </div>
                 </div>
-{% endif %}
+
         </div>
+    {% endif %}
 
             </div>
 

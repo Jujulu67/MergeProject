@@ -1,0 +1,50 @@
+{% extends "::layout/layout.html.twig" %}
+
+{% block body %}
+    <section id="sec">
+    <p>-</p>
+    <div class="row">
+    <div class="col-lg-offset-2 col-lg-8 fond">
+    <center><img src="{{ asset('uploads/' ~ photo.pictureFile) }}"></center>
+    <div class="col-lg-12">
+        {% for comment in comments %}
+            <div class="col-lg-4">
+                <h3><u>Posté par :</u> {{ comment.user }}</h3>
+
+                    <h4>{{ comment.commentaire }}</h4>
+
+            </div>
+            {% endfor %}
+    </div>
+
+        {% if is_granted("ROLE_USER") %}
+
+            <div style="text-align: center" class="col-lg-4">
+                <h3>Ajouter un commentaire</h3>
+                <div class="well">
+
+                    <div class="row">
+                        {{ form_start(form) }}
+                        {{ form_errors(form) }}
+                        <div class="col-lg-12">
+
+
+                            <center>{{ form_widget (form) }}</center>
+
+
+                            <input type="submit" class="btn btn-danger" value="Send"/>
+
+                        </div>
+
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+    </div>
+    </section>
+
+
+{% endblock %}

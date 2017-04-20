@@ -30,6 +30,7 @@ class PhotoController extends Controller
         $activity2 = $this->getDoctrine()->getRepository("ProjetWebBundle:Activity") ->find($activityId);
         $activity = $this->getDoctrine()->getRepository("ProjetWebBundle:Photos") ->findBy(['activity' => $activity2]);
 
+
         if($activity2  == null) {
             throw new NotFoundHttpException("activity id ".$activity2." not found");
         }
@@ -64,6 +65,7 @@ class PhotoController extends Controller
 
         return $this->render('ProjetWebBundle:Activity:addPhoto.html.twig', ['activity' => $activity2, 'photos' => $activity, 'form' => $form->createView()]);
     }
+   
 
 
     /**

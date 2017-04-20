@@ -35,10 +35,9 @@ class Comment
      */
 
     private $photo;
-    
+
     /**
-     * @ORM\ManyToOne(targetEntity="Utilisateurs\UtilisateursBundle\Entity\Utilisateurs", inversedBy="comments", cascade={"remove"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\Column(type="string")
      */
     private $user;
 
@@ -46,7 +45,7 @@ class Comment
      * @ORM\Column(type="string")
      */
 
-    private $comment;
+    private $commentaire;
 
 
     /**
@@ -59,38 +58,16 @@ class Comment
         return $this->id;
     }
 
-    /**
-     * Set comment
-     *
-     * @param string $comment
-     *
-     * @return Comment
-     */
-    public function setComment($comment)
-    {
-        $this->comment = $comment;
-
-        return $this;
-    }
-
-    /**
-     * Get comment
-     *
-     * @return string
-     */
-    public function getComment()
-    {
-        return $this->comment;
-    }
+    
 
     /**
      * Set photo
      *
-     * @param \ProjetWebBundle\Entity\Photo $photo
+     * @param \ProjetWebBundle\Entity\Photos $photo
      *
      * @return Comment
      */
-    public function setPhoto(\ProjetWebBundle\Entity\Photo $photo)
+    public function setPhoto(\ProjetWebBundle\Entity\Photos $photo)
     {
         $this->photo = $photo;
 
@@ -100,7 +77,7 @@ class Comment
     /**
      * Get photo
      *
-     * @return \ProjetWebBundle\Entity\Photo
+     * @return \ProjetWebBundle\Entity\Photos
      */
     public function getPhoto()
     {
@@ -129,5 +106,29 @@ class Comment
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+     * Set commentaire
+     *
+     * @param string $commentaire
+     *
+     * @return Comment
+     */
+    public function setCommentaire($commentaire)
+    {
+        $this->commentaire = $commentaire;
+
+        return $this;
+    }
+
+    /**
+     * Get commentaire
+     *
+     * @return string
+     */
+    public function getCommentaire()
+    {
+        return $this->commentaire;
     }
 }
