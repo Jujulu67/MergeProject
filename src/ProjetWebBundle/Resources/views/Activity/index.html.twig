@@ -8,8 +8,10 @@
                 <br>
                 <h1>Bienvenue sur le site OFFICIEL du BDE de l'Exia Cesi Strasbourg</h1>
                 <br>
-                <h3>Paragraphe rapide sur le BDE de l'Exia</h3>
+                <h3>Le BDE est le bureau des élèves, il s'occupe de représenter officiellement les élèves et les associations.
+                Il aide également les élèves à volariser leurs projet et supervise les manifestations externes et internes.</h3>
                 <br>
+                <h2><u>Derniers évenements :</u></h2>
                 {% for activity in listValidActivity %}
                     <h3><strong> {{ activity.activityName }} : {{ activity.date|date("m/d/Y")|date('Y-m-d') }}</strong>
                         <a
@@ -20,12 +22,13 @@
                     <h4>{{ activity.description }}</h4>
 
                     <br>
-                    <p style="color: red">Ajout de fonctionnalités sur la page d'accueil. 2 dernières activités, photos ? </p>
+
 
                 {% endfor %}
-                </br>
+
                 <h4><a class="btn btn-danger" href="{{ path('list_Valid_activity') }}">Liste des activitées</a></h4>
             </div>
         </div>
+
     </section>
 {% endblock %}

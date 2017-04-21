@@ -25,7 +25,7 @@ class ActivityController extends Controller
      */
     public function indexAction()
     {
-        $listValidActivity = $this->getDoctrine()->getRepository("ProjetWebBundle:Activity")->findBy(array('state' => 2), array('id' => 'DESC'), 1);
+        $listValidActivity = $this->getDoctrine()->getRepository("ProjetWebBundle:Activity")->findBy(array('state' => 2), array('id' => 'DESC'), 2);
 
 
         return $this->render('ProjetWebBundle:Activity:index.html.twig', array(
