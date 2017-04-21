@@ -12,7 +12,9 @@ class RegistrationType extends AbstractType
     {
         $builder->add('nom');
         $builder->add('prenom');
-        $builder->add('phonenumber');
+        $builder->add('phonenumber'
+            , null,["error_bubbling" => true, "label" => "Numéro de téléphone"]
+        );
     }
 
     public function getParent()

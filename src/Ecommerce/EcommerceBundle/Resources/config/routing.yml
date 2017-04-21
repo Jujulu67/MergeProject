@@ -18,6 +18,9 @@ validation:
     path:     /boutique/panier/validation
     defaults: { _controller: EcommerceBundle:Panier:validation }
 
+AjoutProduit:
+    path:     /boutique/moderation
+    defaults: { _controller: EcommerceBundle:Produits:AjoutProduit }
 
 test:
     path:     /boutique/test

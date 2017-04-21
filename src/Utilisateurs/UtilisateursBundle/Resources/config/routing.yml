@@ -1,0 +1,3 @@
+avatar:
+    path:     /avatar
+    defaults: { _controller: UtilisateursBundle:Avatar:addAvatar }
