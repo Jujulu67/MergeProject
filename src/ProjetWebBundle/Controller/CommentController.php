@@ -58,7 +58,7 @@ class CommentController extends Controller
             $em->flush();
 
             return $this->redirectToRoute('add_comment', array('photoId' => $photo2->getId()) );
-            //$this->getFlashBag()->add('success', 'Le détail a bien été enregistré');
+            
         }
 
 

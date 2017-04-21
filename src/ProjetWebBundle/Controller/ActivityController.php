@@ -80,10 +80,10 @@ class ActivityController extends Controller
      * @Route("/activity/moderate/{activityId}", name="edit_activity", requirements={"activityId": "\d+"})
      */
     public function editActivityAction($activityId){
-        $em = $this->getDoctrine()->getManager();
+        
 
         $ActivityRepo = $this->getDoctrine()->getRepository("ProjetWebBundle:Activity");
-        //Get detail by id
+        
         $activity = $ActivityRepo->find($activityId);
 
         $request = $this->get('request_stack')->getCurrentRequest();
@@ -107,7 +107,7 @@ class ActivityController extends Controller
      */
     public function deleteActivityAction($activityId){
         $em = $this->getDoctrine()->getManager();
-        // On récupère les détail de la facture
+        
         $activityRepo = $this->getDoctrine()->getRepository("ProjetWebBundle:Activity");
         //Get detail by id
         $activity = $activityRepo->find($activityId);
@@ -115,9 +115,9 @@ class ActivityController extends Controller
         if($activity == null){
             $this->getFlashBag()->add('error', 'invalid id');
         }
-        // On assigne l'id de la facture a une autre variable pour pouvoir le returner
+        
         $activityId = $activity->getId();
-        // On supprime l'objet
+        
         $em->remove($activity);
         $em->flush();
 

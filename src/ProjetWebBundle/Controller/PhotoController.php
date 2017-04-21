@@ -53,13 +53,13 @@ class PhotoController extends Controller
 
 
             $em = $this->getDoctrine()->getManager();
-//            We use the function addLine on Bill.php to add a line
+
             $activity2->addPhoto($photo);
 
             $em->persist($activity2);
             $em->flush();
             return $this->redirectToRoute('add_photo', array('activityId' => $activity2->getId()) );
-            //$this->getFlashBag()->add('success', 'Le détail a bien été enregistré');
+
         }
 
 
